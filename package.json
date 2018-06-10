@@ -6,7 +6,8 @@
   "scripts": {
     "format": "prettier --config=./.prettierrc --write  './**/*.{ts,tsx}'",
     "jest": "jest --watch",
-    "test": "yarn jest"
+    "test": "yarn jest",
+    "typecheck": "tsc --noEmit"
   },
   "author": "Peter Gundel",
   "license": "MIT",
