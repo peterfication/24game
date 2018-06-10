@@ -6,6 +6,7 @@
   "scripts": {
     "format": "prettier --config=./.prettierrc --write  './**/*.{ts,tsx}'",
     "jest": "jest --watch",
+    "lint": "tslint --project .",
     "test": "yarn jest",
     "typecheck": "tsc --noEmit"
   },
@@ -35,6 +36,7 @@
     "jest": "^23.1.0",
     "prettier": "^1.13.5",
     "ts-jest": "^22.4.6",
+    "ts-lint": "^4.5.1",
     "typescript": "^2.9.1"
   }
 }

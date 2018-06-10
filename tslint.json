@@ -1,0 +1,69 @@
+{
+  "extends": ["tslint:recommended"],
+  "rules": {
+    "align": [true, "statements", "members", "parameters"],
+    "arrow-parens": false,
+    "ban-types": false,
+    "curly": false,
+    "interface-name": false,
+    "max-line-length": [
+      true,
+      {
+        "limit": 100,
+        "ignore-pattern": " \\* http.*"
+      }
+    ],
+    "member-access": false,
+    "no-boolean-literal-compare": false,
+    "no-empty-interface": false,
+    "no-namespace": false,
+    "no-reference": false,
+    "no-string-literal": false,
+    "no-string-throw": false,
+    "no-shadowed-variable": [
+      true,
+      {
+        "class": true,
+        "enum": true,
+        "function": false,
+        "interface": false,
+        "namespace": true,
+        "typeAlias": false,
+        "typeParameter": false
+      }
+    ],
+    "object-literal-key-quotes": false,
+    "object-literal-sort-keys": false,
+    "ordered-imports": [
+      true,
+      {
+        "import-sources-order": "lowercase-last",
+        "named-imports-order": "lowercase-last",
+        "grouped-imports": true
+      }
+    ],
+    "prefer-for-of": false,
+    "quotemark": false,
+    "semicolon": false,
+    "strict-boolean-expressions": false,
+    "trailing-comma": [
+      true,
+      {
+        "multiline": {
+          "arrays": "always",
+          "objects": "always"
+        },
+        "esSpecCompliant": true
+      }
+    ],
+    "variable-name": [true, "allow-pascal-case", "allow-leading-underscore"],
+    "whitespace": [
+      true,
+      {
+        "check-separator": false
+      }
+    ]
+  }
+}
+
+
