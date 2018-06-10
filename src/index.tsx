@@ -26,21 +26,53 @@ export class App extends React.Component<Props> {
     const { game, solutions } = this.state
     const [i1, i2, i3, i4] = this.state.game
     return (
-      <div>
-        <h1>24 Game</h1>
+      <div class="ui container">
+        <h1 class="ui header">24 Game</h1>
 
-        <div>
-          <button onClick={this.random}>Generate!</button>
+        <div class="ui two column grid">
+          <div class="row">
+            <div class="column">
+              <center>
+                <div class="ui green massive label">{i1}</div>
+              </center>
+            </div>
+            <div class="column">
+              <center>
+                <div class="ui green massive label">{i2}</div>
+              </center>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column">
+              <center>
+                <div class="ui green massive label">{i3}</div>
+              </center>
+            </div>
+            <div class="column">
+              <center>
+                <div class="ui green massive label">{i4}</div>
+              </center>
+            </div>
+          </div>
         </div>
 
-        <ul>
-          <li>{i1}</li>
-          <li>{i2}</li>
-          <li>{i3}</li>
-          <li>{i4}</li>
-        </ul>
+        <div class="ui divider" />
 
-        <ul>{solutions.map(solution => <li key={solution}>{solution}</li>)}</ul>
+        <button onClick={this.random} class="ui fluid primary button massive">
+          Generate!
+        </button>
+
+        <div class="ui segment">
+          <div class="ui relaxed divided list">
+            {solutions.map(solution => (
+              <div class="item" key={solution}>
+                <div class="content">
+                  <div class="header">{solution}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     )
   }
