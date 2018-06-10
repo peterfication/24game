@@ -4,6 +4,7 @@
   "description": "THE 24 game",
   "main": "app.ts",
   "scripts": {
+    "format": "prettier --config=./.prettierrc --write  './**/*.{ts,tsx}'",
     "jest": "jest --watch",
     "test": "yarn jest"
   },
@@ -31,6 +32,7 @@
     "@types/jest": "^23.0.0",
     "babel-preset-env": "^1.7.0",
     "jest": "^23.1.0",
+    "prettier": "^1.13.5",
     "ts-jest": "^22.4.6",
     "typescript": "^2.9.1"
   }

@@ -1,3 +1,3 @@
 export function solve() {
-  return true;
+  return true
 }
