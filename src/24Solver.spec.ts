@@ -23,7 +23,7 @@ describe('solve', () => {
     it(`matches the output for ${input}`, () => {
       // Array spread for functions does not work in Typescript yet
       // https://github.com/Microsoft/TypeScript/issues/4130
-      expect(solve(input[0], input[1], input[2], input[3])).toEqual(output)
+      expect(solve(input)).toEqual(output)
     })
   })
 })
