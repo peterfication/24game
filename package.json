@@ -2,8 +2,36 @@
   "name": "24game",
   "version": "0.0.1",
   "description": "THE 24 game",
-  "main": "index.js",
-  "scripts": {},
+  "main": "app.ts",
+  "scripts": {
+    "jest": "jest --watch",
+    "test": "yarn jest"
+  },
   "author": "Peter Gundel",
-  "license": "MIT"
+  "license": "MIT",
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testRegex": "^.+\\.spec\\.ts$",
+    "moduleDirectories": [
+      "node_modules",
+      "."
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "node",
+      "ts"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^23.0.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^23.1.0",
+    "ts-jest": "^22.4.6",
+    "typescript": "^2.9.1"
+  }
 }
