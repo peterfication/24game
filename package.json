@@ -4,7 +4,8 @@
   "description": "THE 24 game",
   "main": "app.ts",
   "scripts": {
-    "build": "parcel build ./src/index.html/",
+    "build": "parcel build ./src/index.html/ --public-url /24game/",
+    "deploy": "rm -rf dist && yarn build && gh-pages -d dist -m '🚀 Deploy a new version'",
     "format": "prettier --config=./.prettierrc --write  './**/*.{ts,tsx}'",
     "jest": "jest --watch",
     "lint": "tslint --project .",
@@ -39,6 +40,7 @@
     "@types/jest": "^23.0.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "gh-pages": "^1.2.0",
     "jest": "^23.1.0",
     "parcel-bundler": "^1.8.1",
     "prettier": "^1.13.5",
