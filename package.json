@@ -1,0 +1,9 @@
+{
+  "name": "24game",
+  "version": "0.0.1",
+  "description": "THE 24 game",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Peter Gundel",
+  "license": "MIT"
+}
