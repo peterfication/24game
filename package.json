@@ -4,9 +4,11 @@
   "description": "THE 24 game",
   "main": "app.ts",
   "scripts": {
+    "build": "parcel build ./src/index.html/",
     "format": "prettier --config=./.prettierrc --write  './**/*.{ts,tsx}'",
     "jest": "jest --watch",
     "lint": "tslint --project .",
+    "start": "parcel ./src/index.html",
     "test": "yarn jest",
     "typecheck": "tsc --noEmit"
   },
@@ -29,11 +31,16 @@
       "ts"
     ]
   },
-  "dependencies": {},
+  "dependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  },
   "devDependencies": {
     "@types/jest": "^23.0.0",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "jest": "^23.1.0",
+    "parcel-bundler": "^1.8.1",
     "prettier": "^1.13.5",
     "ts-jest": "^22.4.6",
     "ts-lint": "^4.5.1",
