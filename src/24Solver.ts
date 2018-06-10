@@ -46,6 +46,14 @@ const buildReplacements = (calculationArray: CalculationArray): Record<string, s
   }
 }
 
+export function random(): Input {
+  let randomInput: Input = [1, 1, 1, 1]
+  while (solve(randomInput).length === 0) {
+    randomInput = [...new Array(4)].map(x => Math.floor(Math.random() * 9) + 1)
+  }
+  return randomInput
+}
+
 export function solve(input: Input): string[] {
   const calculationArrays: CalculationArray[] = cartesionProduct(
     cartesionProduct(expressions, operatorsPermutations),

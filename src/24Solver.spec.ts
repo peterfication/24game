@@ -1,4 +1,11 @@
-import { Input, InputNumber, operatorsPermutations, solve, uniquePermutations } from './24Solver'
+import {
+  Input,
+  InputNumber,
+  operatorsPermutations,
+  random,
+  solve,
+  uniquePermutations,
+} from './24Solver'
 
 describe('operatorsPermutations', () => {
   const expectedOperatorsPermutations: string[][] = [
@@ -71,6 +78,18 @@ describe('operatorsPermutations', () => {
   it('works', () => {
     expect(operatorsPermutations.length).toBe(expectedOperatorsPermutations.length)
     operatorsPermutations.map(x => expect(expectedOperatorsPermutations).toContainEqual(x))
+  })
+})
+
+describe('random', () => {
+  it('can generate a random 24 game', () => {
+    ;[new Array(50)].map(() => {
+      const result = random()
+      result.map(value => {
+        expect(value).toBeGreaterThanOrEqual(1)
+        expect(value).toBeLessThanOrEqual(9)
+      })
+    })
   })
 })
 
